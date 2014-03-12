@@ -13,8 +13,8 @@
 }
 
 .site-name {
-  margin: 0;
-  line-height: 64px;
+  margin-top: 0;
+  margin-bottom: 5px;
   font-size: 42px;
 }
 
@@ -28,13 +28,12 @@
 }
 
 .site-slogan {
-  line-height: 32px;
   font-size: 24px;
   margin: 0;
 }
 
 .help.menu {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .region-content-bottom {
@@ -44,10 +43,8 @@
 @media (max-width: 767px) {
   .site-name {
     font-size: 32px;
-    line-height: 42px;
   }
   .site-slogan {
     font-size: 18px;
-    line-height: 24px;
   }
 }
