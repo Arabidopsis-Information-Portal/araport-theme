@@ -71,7 +71,11 @@ settings[bootstrap_cdn] = ''
 ; --------------
 settings[bootstrap_breadcrumb] = 2 ; Only in admin areas
 
+; Popovers
+; --------------
+settings[bootstrap_popover_placement] = 'auto top' ; Popover on the top
+
 ; Tooltips
 ; --------------
 settings[bootstrap_tooltip_descriptions] = 0 ; Don't convert form field descriptions
-settings[bootstrap_tooltip_placement] = 'auto bottom' ; Tooltop on the bottom
+settings[bootstrap_tooltip_placement] = 'auto bottom' ; Tooltip on the bottom
