@@ -1,0 +1,50 @@
+/**
+ * This file should get overwritten if Method 1 is used. If Method 2 is chosen,
+ * remove this comment and start adding your styles to this file.
+ */
+#logo {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+#name-and-slogan {
+  display: table-cell;
+}
+
+.site-name {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 42px;
+}
+
+.site-name a, .site-name a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.site-name a:hover {
+  color: #000;
+}
+
+.site-slogan {
+  font-size: 24px;
+  margin: 0;
+}
+
+.help.menu {
+  margin-top: 10px;
+}
+
+.region-content-bottom {
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .site-name {
+    font-size: 32px;
+  }
+  .site-slogan {
+    font-size: 18px;
+  }
+}

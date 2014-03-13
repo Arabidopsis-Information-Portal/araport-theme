@@ -1,0 +1,6 @@
+[submodule "bootstrap"]
+	path = bootstrap
+	url = https://github.com/twbs/bootstrap.git
+[submodule "twbs-dropdown-doubletap"]
+	path = twbs-dropdown-doubletap
+	url = https://github.com/mrhanlon/twbs-dropdown-doubletap.git
