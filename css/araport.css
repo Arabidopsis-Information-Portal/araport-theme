@@ -40,6 +40,15 @@
   margin-top: 20px;
 }
 
+.form-item-captcha-response label {
+  display: block;
+}
+.form-item-captcha-response .form-control {
+  display: inline;
+  width: auto;
+  margin: 0 1px;
+}
+
 @media (max-width: 767px) {
   .site-name {
     font-size: 32px;
