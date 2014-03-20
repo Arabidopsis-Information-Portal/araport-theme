@@ -11,6 +11,7 @@
 
 #homebox .homebox-column {
   min-height: 40px;
+  height: auto!important;
 }
 
 #homebox .homebox-column-wrapper {
@@ -132,7 +133,6 @@ div.homebox-colors {
   margin: 10px 0;
 }
 #homebox-add ul {
-  margin: 0;
   padding: 0;
 }
 #homebox-add li {
