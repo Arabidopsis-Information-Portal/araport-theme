@@ -1,0 +1,191 @@
+#homebox {
+  position: relative;
+}
+#homebox-admin-display-form .roles {
+  font-size: 86%;
+}
+
+/*
+** Columns/regions
+*/
+
+#homebox .homebox-column {
+  min-height: 40px;
+}
+
+#homebox .homebox-column-wrapper {
+  float: left;
+}
+#homebox .homebox-maximized {
+  width: 100%;
+}
+
+/*
+** Portlets/boxes
+*/
+
+#homebox .homebox-portlet-collapsed .panel-body {
+  display: none;
+}
+
+#homebox .homebox-draggable .portlet-header:hover {
+  cursor: move;
+}
+
+#homebox div.view-header {
+  text-align: right;
+}
+#homebox .portlet-maximized {
+  clear: both;
+}
+
+/*
+** Icons
+*/
+/*
+.portlet-icon {
+  position: relative;
+  top: 1px;
+  display: block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*/
+.panel-actions > a {
+  cursor: pointer;
+  color: #333;
+}
+.panel-actions > a:hover {
+  text-decoration: none;
+  color: #666;
+}
+
+.portlet-header .portlet-settings:before {
+  content: "\e019";
+}
+.portlet-plus:before {
+  content: "\e106";
+}
+.portlet-minus:before {
+  content: "\e105";
+}
+.portlet-close:before {
+  content: "\e014";
+}
+.portlet-maximize:before {
+  content: "\e096";
+}
+.portlet-maximized .portlet-minimize:before {
+  content: "\e097";
+}
+
+/*
+** Closed box/portlet class
+*/
+#homebox .homebox-portlet-closed {
+  display: none;
+}
+
+/*
+** Placeholder
+*/
+#homebox .homebox-placeholder {
+  visibility: visible !important;
+  margin: 5px 0;
+  padding: 0;
+  /*background: #FFFFDD;*/
+  border: 3px dashed #ccc;
+}
+#homebox .homebox-placeholder * {
+  visibility: hidden;
+}
+
+/*
+** Colors
+*/
+div.homebox-colors {
+  float: right;
+  margin: 2px;
+}
+.homebox-color-selector {
+  display: block;
+  float: left;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  margin: 1px;
+  border: 1px solid #999;
+}
+.homebox-color-message {
+  font-size: 85%;
+  color: #999;
+  float: left;
+  margin-right: 4px;
+}
+
+/* Page configure UI */
+#homebox-add {
+  margin: 10px 0;
+}
+#homebox-add ul {
+  margin: 0;
+  padding: 0;
+}
+#homebox-add li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  background: none;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+#homebox-add .last {
+  margin: 0;
+}
+.homebox-msg {
+  margin-right: 10px;
+}
+#homebox-minimize-to-save {
+  font-size: 90%;
+  color: #999;
+  font-style: italic;
+  display: none;
+  margin-right: 5px;
+}
+#homebox-changes-made {
+  font-size: 80%;
+  color: darkRed;
+  font-style: italic;
+  display: none;
+}
+#homebox-add {
+  display: none;
+}
+#center #homebox-save-form {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#homebox-buttons {
+  margin-bottom: 10px;
+}
+#homebox-buttons .form-submit {
+  margin: 0;
+  cursor: pointer;
+}
+.homebox-auto-save #homebox-save-form {
+  display: none;
+}
+.label-used {
+  background-color: white;
+  border: 1px solid #ccc;
+  color: #333;
+  font-weight: normal;
+}

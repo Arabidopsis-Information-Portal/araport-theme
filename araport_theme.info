@@ -27,6 +27,7 @@ regions[page_bottom]    = 'Page bottom'
 
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/araport.css
+stylesheets[all][] = css/homebox.css
 
 
 ; For information on choosing the desired method, please read the Drupal
