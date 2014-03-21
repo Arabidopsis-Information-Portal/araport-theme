@@ -101,19 +101,24 @@
   background: #efefef;
   border: 3px dashed #ccc;
   border-radius: 4px;
+  min-height: 12em;
+  position: relative;
+}
+#homebox .homebox-placeholder:hover {
+  background: #e3e9e1;
 }
 #homebox .homebox-placeholder:after {
   content: "Drop Application Here";
-  color: #aaa;
-  font-size: 2em;
-  text-align: center;
-  width: 100%;
   display: block;
-  vertical-align: middle;
+  color: #aaa;
   text-shadow: 1px 1px 2px #fff;
-  position: relative;
+  text-align: center;
+  font-size: 2em;
+  line-height: 2em;
+  position: absolute;
   top: 50%;
   margin-top: -1em;
+  width: 100%;
 }
 #homebox .homebox-placeholder * {
   visibility: hidden;
