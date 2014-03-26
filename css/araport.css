@@ -48,6 +48,9 @@
   width: auto;
   margin: 0 1px;
 }
+.form-required {
+  color: #ff0000;
+}
 
 @media (max-width: 767px) {
   .site-name {
