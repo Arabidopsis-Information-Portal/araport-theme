@@ -172,7 +172,6 @@
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
       <?php print render($page['content']); ?>
-      <?php print render($page['content_bottom']); ?>
     </section>
 
     <?php if (!empty($page['sidebar_second'])): ?>
@@ -182,6 +181,16 @@
     <?php endif; ?>
 
   </div>
+
+  <?php if (!empty($page['content_bottom'])): ?>
+    <div class="row">
+      <section class="col-md-12 content-bottom-wrapper">
+        <div class="well well-sm">
+          <?php print render($page['content_bottom']); ?>
+        </div>
+      </section>
+    </div>
+  <?php endif; ?>
 </div>
 <footer class="footer container">
   <?php print render($page['footer']); ?>
