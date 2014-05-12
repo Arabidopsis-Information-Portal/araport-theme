@@ -52,6 +52,24 @@
   color: #ff0000;
 }
 
+.region-content-bottom {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.region-content-bottom:before, .region-content-bottom:after {
+  content: '';
+  display: table;
+  line-height: 0;
+}
+.region-content-bottom:after {
+  clear: both;
+}
+
+.region-content-bottom .block h2.block-title {
+  margin-top: 0px;
+}
+
 @media (max-width: 767px) {
   .site-name {
     font-size: 32px;
