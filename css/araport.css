@@ -2,6 +2,16 @@
  * This file should get overwritten if Method 1 is used. If Method 2 is chosen,
  * remove this comment and start adding your styles to this file.
  */
+header[role=banner] {
+  padding-top: 12px;
+  background-image: url('../images/banner.jpg');
+}
+
+header[role=banner] > .navbar {
+  margin-top: 10px;
+  background-color: rgba(248,248,248,.9);
+}
+
 #logo {
   display: table-cell;
   vertical-align: middle;
@@ -19,16 +29,19 @@
 }
 
 .site-name a, .site-name a:hover {
-  color: #333;
+  color: #eee;
+  text-shadow: -2px 2px 0 #333, -2px -2px 0 #333, 2px 2px 0 #333, 2px -2px 0 #333;
   text-decoration: none;
 }
 
 .site-name a:hover {
-  color: #000;
+  color: #fff;
 }
 
 .site-slogan {
   font-size: 24px;
+  color: #eee;
+  text-shadow: -1px 1px 0 #333, -1px -1px 0 #333, 1px 1px 0 #333, 1px -1px 0 #333;
   margin: 0;
 }
 
@@ -52,22 +65,45 @@
   color: #ff0000;
 }
 
+.region-header .dropdown-menu {
+  z-index: 1001;
+}
+
 .region-content-bottom {
   margin-left: -15px;
   margin-right: -15px;
 }
 
-.region-content-bottom:before, .region-content-bottom:after {
+.region-content-bottom:before,
+.region-content-bottom:after {
   content: '';
   display: table;
   line-height: 0;
 }
+
 .region-content-bottom:after {
   clear: both;
 }
 
 .region-content-bottom .block h2.block-title {
   margin-top: 0px;
+}
+
+a.active-trail.dropdown-toggle {
+  color: #555555;
+  background-color: #e7e7e7;
+}
+
+@media screen and (min-width: 768px) {
+  ul.secondary {
+    float: left;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  ul.secondary {
+    float: right;
+  }
 }
 
 @media (max-width: 767px) {
