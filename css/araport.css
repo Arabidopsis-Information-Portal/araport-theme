@@ -128,11 +128,6 @@ header[role=banner] > .navbar {
   margin-top: 0px;
 }
 
-a.active-trail.dropdown-toggle {
-  color: #555555;
-  background-color: #e7e7e7;
-}
-
 ul.secondary {
   float: left;
 }
@@ -158,6 +153,7 @@ ul.secondary {
 }
 
 .navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active-trail > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   background-color: #fff;
