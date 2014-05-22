@@ -76,12 +76,7 @@
 <header role="banner">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <?php if (!empty($page['header'])): ?>
-          <div class="pull-right">
-            <?php print render($page['header']); ?>
-          </div>
-        <?php endif; ?>
+      <div class="col-md-8 col-sm-7">
         <?php if ($logo): ?>
         <div id="logo" class="logo">
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
@@ -99,6 +94,12 @@
           <h2 class="site-slogan"><?php print $site_slogan; ?></h2>
           <?php endif; ?>
         </div>
+      </div>
+      <div class="col-md-4 col-sm-5">
+        <?php if (!empty($page['header'])): ?>
+          <?php print render($page['header']); ?>
+        <?php endif; ?>
+      </div>
       </div>
     </div>
   </div>
