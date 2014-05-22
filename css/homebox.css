@@ -193,6 +193,7 @@ div.homebox-colors {
   right: 0;
 }
 #homebox-buttons {
+  margin-top: -10px;
   margin-bottom: 10px;
 }
 #homebox-buttons .form-submit {
@@ -207,4 +208,8 @@ div.homebox-colors {
   border: 1px solid #ccc;
   color: #333;
   font-weight: normal;
+}
+
+.homebox-portlet .panel-body {
+  overflow-x: scroll;
 }

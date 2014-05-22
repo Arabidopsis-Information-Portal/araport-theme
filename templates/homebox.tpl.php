@@ -28,10 +28,10 @@
       <span class="label label-info">Not used</span>
     </div>
   <?php endif; ?>
-
   <div class="homebox-maximized"></div>
+  <div class="row">
   <?php for ($i = 1; $i <= count($regions); $i++): ?>
-    <div class="homebox-column-wrapper homebox-column-wrapper-<?php print $i; ?> homebox-row-<?php print $page->settings['rows'][$i]; ?>"<?php print $page->settings['widths'][$i] ? ' style="width: ' . $page->settings['widths'][$i] . '%;"' : ''; ?>>
+    <div class="col-md-<?php print(12 / count($regions)); ?> homebox-column-wrapper homebox-column-wrapper-<?php print $i; ?> homebox-row-<?php print $page->settings['rows'][$i]; ?>">
       <div class="homebox-column" id="homebox-column-<?php print $i; ?>">
         <?php foreach ($regions[$i] as $key => $weight): ?>
           <?php foreach ($weight as $block): ?>
@@ -43,6 +43,7 @@
       </div>
     </div>
   <?php endfor; ?>
+  </div>
 </div>
 <!-- hello homebox -->
 <script type="text/javascript">
