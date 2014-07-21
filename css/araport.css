@@ -5,6 +5,7 @@
 header[role=banner] {
   padding-top: 12px;
   background-image: url('../images/banner.jpg');
+  background-size: cover;
 }
 
 header[role=banner] > .navbar {
