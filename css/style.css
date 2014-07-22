@@ -6574,9 +6574,6 @@ ul.secondary {
 }
 .aip-icon-dna:before {
   background-image: url(../images/dna.png);
-  -webkit-transform: rotate(60deg);
-  -ms-transform: rotate(60deg);
-  transform: rotate(60deg);
 }
 .form-item.error {
   background-color: inherit;
