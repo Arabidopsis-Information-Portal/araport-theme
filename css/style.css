@@ -4031,7 +4031,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #080808;
 }
 .navbar-inverse .navbar-brand {
-  color: #adadad;
+  color: #fafafa;
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
@@ -4042,7 +4042,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #adadad;
 }
 .navbar-inverse .navbar-nav > li > a {
-  color: #adadad;
+  color: #fafafa;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
@@ -4089,7 +4089,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     background-color: #080808;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-    color: #adadad;
+    color: #fafafa;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -4110,7 +4110,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-inverse .navbar-link {
-  color: #adadad;
+  color: #fafafa;
 }
 .navbar-inverse .navbar-link:hover {
   color: #ffffff;
@@ -6454,7 +6454,7 @@ header[role=banner] > .navbar {
 .help-menu .nav > li > a {
   background-color: #474747;
   background-color: rgba(71, 71, 71, 0.95);
-  color: white;
+  color: #fafafa;
 }
 .help-menu .nav > li.active > a,
 .help-menu .nav > li.open > a,
@@ -6526,6 +6526,7 @@ ul.secondary {
   padding: .5em 0;
   margin-bottom: 40px;
   background-color: #4bbc4c;
+  text-shadow: 1px 1px 0 #389639;
 }
 .homepage-banner::after {
   content: "";

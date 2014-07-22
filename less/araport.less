@@ -101,7 +101,7 @@ header[role=banner] > .navbar {
 .help-menu .nav > li > a {
   background-color: @gray;
   background-color: fade(@gray, 95);
-  color: white;
+  color: @navbar-inverse-link-color;
 }
 
 .help-menu .nav > li.active > a,
@@ -188,6 +188,7 @@ ul.secondary {
   padding: .5em 0;
   margin-bottom: 40px;
   background-color: @state-success-border;
+  text-shadow: 1px 1px 0 darken(@state-success-border, 11%);
 }
 .homepage-banner::after {
   content: "";
