@@ -6435,7 +6435,10 @@ header[role=banner] > .navbar {
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active-trail > a,
+.navbar-inverse .navbar-nav > .active-trail > a:hover,
+.navbar-inverse .navbar-nav > .active-trail > a:focus {
   background-color: #fff;
   color: #474747;
 }
@@ -6510,15 +6513,6 @@ ul.secondary {
   ul.secondary {
     float: right;
   }
-}
-.navbar-default {
-  border-color: #ffffff;
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active-trail > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  background-color: #fff;
 }
 .homepage-banner {
   position: relative;
