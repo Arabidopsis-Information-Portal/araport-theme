@@ -6378,7 +6378,7 @@ table .checkbox input[type="checkbox"] {
  */
 header[role=banner] {
   padding-top: 12px;
-  background-image: url('../images/banner.jpg');
+  background-image: url('../images/banner.jpg?t=v1.2.1');
   background-size: cover;
 }
 header[role=banner] > .navbar {
