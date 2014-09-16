@@ -100,7 +100,6 @@
           <?php print render($page['header']); ?>
         <?php endif; ?>
       </div>
-      </div>
     </div>
   </div>
   <div id="navbar" class="<?php print $navbar_classes; ?>">
