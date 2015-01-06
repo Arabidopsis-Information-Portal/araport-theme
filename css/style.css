@@ -6581,3 +6581,39 @@ ul.secondary {
 .alert {
   border-width: 2px 2px 2px 20px;
 }
+.book-navigation .page-links {
+  border-top: 1px solid #c5c5c5;
+  padding-top: 20px;
+  margin-top: -20px;
+}
+.book-toc li {
+  padding-left: 1em;
+}
+.book-toc li:before {
+  color: #858585;
+  display: inline-block;
+  font-family: FontAwesome;
+  margin-left: -1em;
+  position: absolute;
+  top: 10px;
+}
+.book-toc li.collapsed:before {
+  content: '\f0da';
+}
+.book-toc li.expanded:before {
+  content: '\f0d7';
+}
+.book-toc li.leaf:before {
+  content: '\f111';
+  font-size: 0.5em;
+  margin-left: -2em;
+  top: 14px;
+}
+.book-toc a.active:after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  width: 90%;
+  display: block;
+  border-bottom: 3px solid #97b3e3;
+}

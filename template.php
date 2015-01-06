@@ -71,7 +71,20 @@ function araport_theme_bootstrap_search_form_wrapper($variables) {
 }
 
 /**
+ * Overrides theme_menu_tree().
+ * @see @file theme/menu/menu-tree.func.php from bootstrap parent theme
+ */
+function araport_theme_menu_tree(&$variables) {
+  if (strpos($variables['theme_hook_original'], 'book_toc') !== FALSE) {
+    return '<ul class="menu book-toc nav">' . $variables['tree'] . '</ul>';
+  } else {
+    return '<ul class="menu nav">' . $variables['tree'] . '</ul>';
+  }
+}
+
+/**
  * Overrides theme_menu_link().
+ * @see @file theme/menu/menu-link.func.php from bootstrap parent theme
  * Make /user active for current user /user/<uid>
  */
 function araport_theme_menu_link(array $variables) {
@@ -100,6 +113,15 @@ function araport_theme_menu_link(array $variables) {
       $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
     }
   }
+
+  // Book TOC
+  if (strpos($element['#original_link']['menu_name'], 'book-toc') !== FALSE) {
+    if ($element['#below']) {
+      unset($element['#below']['#theme_wrappers']);
+      $sub_menu = '<ul class="menu nav">' . drupal_render($element['#below']) . '</ul>';
+    }
+  }
+
   // On primary navigation menu, class 'active' is not set on active menu item.
   // @see https://drupal.org/node/1896674
   if (($element['#href'] == $_GET['q'] || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']))) {
