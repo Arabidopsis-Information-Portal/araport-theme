@@ -138,3 +138,39 @@ function araport_theme_menu_link(array $variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+/**
+ * Implements template_preprocess_book_navigation().
+ * @see https://api.drupal.org/api/drupal/modules!book!book.module/function/template_preprocess_book_navigation/7
+ *
+ * Add a complete Table of Contents to the first book page
+ */
+function araport_theme_preprocess_book_navigation(&$vars) {
+  $vars['table_of_contents'] = '';
+  if ($vars['current_depth'] == 1) {
+    $items = array();
+
+    $node = node_load($vars['book_id']);
+    $tree = book_menu_subtree_data($node->book);
+    $tree = array_shift($tree); // Do not include the book item itself.
+    if ($tree['below']) {
+      foreach ($tree['below'] as $page) {
+        $items[] = araport_theme_book_toc($page);
+      }
+    }
+    $vars['table_of_contents'] = theme('item_list', array('items' => $items, 'title' => t('Table of contents')));
+  }
+}
+
+function araport_theme_book_toc($page) {
+  $item = array(
+    'data' => l(t($page['link']['link_title']), $page['link']['link_path'])
+  );
+  if ($page['below']) {
+    $item['children'] = array();
+    foreach ($page['below'] as $child_page) {
+      $item['children'][] = araport_theme_book_toc($child_page);
+    }
+  }
+  return $item;
+}

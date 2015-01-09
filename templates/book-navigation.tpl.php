@@ -33,7 +33,13 @@
 */
 ?>
 <?php if ($has_links): ?>
-  <br><br>
+  <?php if ($table_of_contents): ?>
+    <div id="book-toc-<?php print $book_id; ?>">
+      <?php print $table_of_contents; ?>
+    </div>
+  <?php else: ?>
+    <br><br>
+  <?php endif; ?>
   <div id="book-navigation-<?php print $book_id; ?>" class="book-navigation well">
     <p class="lead">
       Documentation Navigation
