@@ -2,6 +2,11 @@
  * This file should get overwritten if Method 1 is used. If Method 2 is chosen,
  * remove this comment and start adding your styles to this file.
  */
+@phone-tablet-only: ~"screen and (max-width: @{screen-sm-max})";
+@tablet:  ~"screen and (min-width: @{screen-sm-min})";
+@normal:  ~"screen and (min-width: @{screen-md-min})";
+@wide:    ~"screen and (min-width: @{screen-lg-min})";
+
 header[role=banner] {
   padding-top: 12px;
   background-image: url('../images/banner.jpg?t=v1.2.1');
@@ -47,12 +52,19 @@ header[role=banner] > .navbar {
                1px 1px 0 @brand-success,
                1px -1px 0 @brand-success;
   margin: 0;
-  text-align: right;
   font-style: italic;
 }
 
+@media @phone-tablet-only {
+  .site-name {
+    font-size: 32px;
+  }
+  .site-slogan {
+    font-size: 18px;
+  }
+}
 
-@media (min-width: @screen-lg-min) {
+@media @wide {
   .site-name {
     font-size: 42px;
   }
@@ -155,21 +167,8 @@ header[role=banner] > .navbar {
 }
 
 ul.secondary {
-  float: left;
-}
-
-@media screen and (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
-  .navbar-nav > li > a {
-    padding: 10px;
-  }
-}
-
-ul.secondary {
   float: none;
-}
-
-@media screen and (min-width: @screen-md-min) {
-  ul.secondary {
+  @media @tablet {
     float: right;
   }
 }
@@ -292,4 +291,82 @@ ul.secondary {
     display: block;
     border-bottom: 3px solid #97b3e3;
   }
+}
+
+.view .node-teaser {
+  h2 {
+    font-size: 20px;
+  }
+
+  border-bottom: 1px solid @gray-light;
+
+  ul.links {
+    margin-left: 0;
+    margin-bottom: 0;
+
+    li {
+      float: right;
+      padding: 0;
+      margin-left: 5px;
+
+      a {
+        display: inline-block;
+        padding: 3px 6px;
+        color: white;
+        background-color: @link-color;
+      }
+    }
+  }
+}
+
+.node-content-type-icon {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0,0);
+  padding-right: 3px;
+}
+
+.view.content-type-icons {
+
+  .node-job-posting > h2 a:before {
+    &:extend(.node-content-type-icon);
+    content: '\f08d';
+  }
+
+  .node-aip-announcement > h2 a:before {
+    &:extend(.node-content-type-icon);
+    content: '\f1ea';
+  }
+
+  .node-aip-release-note > h2 a:before {
+    &:extend(.node-content-type-icon);
+    content: '\f02b';
+  }
+
+  .node-conference-or-event > h2 a:before {
+    &:extend(.node-content-type-icon);
+    content: '\f145';
+  }
+
+  .node-service-notice > h2 a:before {
+    &:extend(.node-content-type-icon);
+    content: '\f0ad';
+  }
+
+  .node-science-app > h2 a:before {
+    &:extend(.node-content-type-icon);
+    content: '\f135';
+  }
+
+  .node-question > h2 a:before, .node-answer > h2 a:before {
+    &:extend(.node-content-type-icon);
+    content: '\f059';
+  }
+
+
+
 }
