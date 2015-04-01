@@ -174,3 +174,8 @@ function araport_theme_book_toc($page) {
   }
   return $item;
 }
+
+function araport_theme_feed_icon($variables) {
+  $text = t('Subscribe to !feed-title', array('!feed-title' => $variables ['title']));
+  return l("$text <i class=\"fa fa-rss-square\"></i>", $variables ['url'], array('html' => true, 'attributes' => array('title' => $text)));
+}
