@@ -1,5 +1,13 @@
 <?php
 
+function araport_theme_theme() {
+  return array(
+    'definition_list' => array(
+      'variables' => array('items' => array(), 'class' => null),
+    )
+  );
+}
+
 /**
  * @file
  * template.php
@@ -178,4 +186,20 @@ function araport_theme_book_toc($page) {
 function araport_theme_feed_icon($variables) {
   $text = t('Subscribe to !feed-title', array('!feed-title' => $variables ['title']));
   return l("$text <i class=\"fa fa-rss-square\"></i>", $variables ['url'], array('html' => true, 'attributes' => array('title' => $text)));
+}
+
+function araport_theme_definition_list($variables) {
+  error_log('araport_theme_definition_list');
+  error_log(print_r($variables, 1));
+
+  $items = array_map(function($item) {
+    return "<dt>{$item['term']}</dt><dd>{$item['def']}</dd>";
+  }, $variables['items']);
+
+  if ($variables['class']) {
+    $tag = '<dl class="'. $variables['class'] .'">';
+  } else {
+    $tag = '<dl>';
+  }
+  return $tag.join($items).'</dl>';
 }
