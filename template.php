@@ -189,9 +189,6 @@ function araport_theme_feed_icon($variables) {
 }
 
 function araport_theme_definition_list($variables) {
-  error_log('araport_theme_definition_list');
-  error_log(print_r($variables, 1));
-
   $items = array_map(function($item) {
     return "<dt>{$item['term']}</dt><dd>{$item['def']}</dd>";
   }, $variables['items']);
