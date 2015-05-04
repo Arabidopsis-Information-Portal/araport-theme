@@ -7452,3 +7452,10 @@ ul.secondary {
 .view.content-type-icons .node-answer > h2 a:before {
   content: '\f059';
 }
+.araport-service-monitor .pane-content {
+  padding-bottom: 20px;
+}
+.araport-service-monitor .row {
+  padding-top: 6px;
+  margin-top: 6px;
+}
