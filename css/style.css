@@ -7459,3 +7459,6 @@ ul.secondary {
   padding-top: 6px;
   margin-top: 6px;
 }
+.panel-pane {
+  margin-bottom: 20px;
+}
