@@ -1,6 +1,6 @@
 <?php
 
-function araport_theme_theme() {
+function araportsandbox_theme_theme() {
   return array(
     'definition_list' => array(
       'variables' => array('items' => array(), 'class' => null),
@@ -12,7 +12,7 @@ function araport_theme_theme() {
  * @file
  * template.php
  */
-function araport_theme_preprocess_page(&$variables) {
+function araportsandbox_theme_preprocess_page(&$variables) {
 
   // Help nav.
   // Build links.
@@ -24,14 +24,14 @@ function araport_theme_preprocess_page(&$variables) {
 /**
  * Theme wrapper function for the help menu links.
  */
-function araport_theme_menu_tree__menu_help_menu(&$variables) {
+function araportsandbox_theme_menu_tree__menu_help_menu(&$variables) {
   return '<ul class="menu nav nav-pills help">' . $variables['tree'] . '</ul>';
 }
 
 /**
  * Overrides theme_button().
  */
-function araport_theme_button($variables) {
+function araportsandbox_theme_button($variables) {
   $element = $variables['element'];
   element_set_attributes($element, array('id', 'name', 'value', 'type'));
 
@@ -60,7 +60,7 @@ function araport_theme_button($variables) {
 /**
  * Overrides hook_bootstrap_search_form_wrapper();
  */
-function araport_theme_bootstrap_search_form_wrapper($variables) {
+function araportsandbox_theme_bootstrap_search_form_wrapper($variables) {
   $output = '<div class="input-group">';
   $output .= $variables['element']['#children'];
   $output .= '<span class="input-group-btn">';
@@ -82,7 +82,7 @@ function araport_theme_bootstrap_search_form_wrapper($variables) {
  * Overrides theme_menu_tree().
  * @see @file theme/menu/menu-tree.func.php from bootstrap parent theme
  */
-function araport_theme_menu_tree(&$variables) {
+function araportsandbox_theme_menu_tree(&$variables) {
   if (strpos($variables['theme_hook_original'], 'book_toc') !== FALSE) {
     return '<ul class="menu book-toc nav">' . $variables['tree'] . '</ul>';
   } else {
@@ -95,7 +95,7 @@ function araport_theme_menu_tree(&$variables) {
  * @see @file theme/menu/menu-link.func.php from bootstrap parent theme
  * Make /user active for current user /user/<uid>
  */
-function araport_theme_menu_link(array $variables) {
+function araportsandbox_theme_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
 
@@ -120,6 +120,22 @@ function araport_theme_menu_link(array $variables) {
       $element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
       $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
     }
+    elseif ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] >1)) {
+
+      // Add our own wrapper.
+      unset($element['#below']['#theme_wrappers']);
+      $sub_menu = '<ul class="dropdown-menu2">' . drupal_render($element['#below']) . '</ul>';
+      // Generate as standard dropdown.
+      $element['#title'] .= ' <span class="caret"></span>';
+      $element['#attributes']['class'][] = 'dropdown';
+      $element['#localized_options']['html'] = TRUE;
+
+      // Set dropdown trigger element to # to prevent inadvertant page loading
+      // when a submenu link is clicked.
+      $element['#localized_options']['attributes']['data-target'] = '#';
+      $element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
+      $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+    }    
   }
 
   // Book TOC
@@ -153,7 +169,7 @@ function araport_theme_menu_link(array $variables) {
  *
  * Add a complete Table of Contents to the first book page
  */
-function araport_theme_preprocess_book_navigation(&$vars) {
+function araportsandbox_theme_preprocess_book_navigation(&$vars) {
   $vars['table_of_contents'] = '';
   if ($vars['current_depth'] == 1) {
     $items = array();
@@ -163,32 +179,32 @@ function araport_theme_preprocess_book_navigation(&$vars) {
     $tree = array_shift($tree); // Do not include the book item itself.
     if ($tree['below']) {
       foreach ($tree['below'] as $page) {
-        $items[] = araport_theme_book_toc($page);
+        $items[] = araportsandbox_theme_book_toc($page);
       }
     }
     $vars['table_of_contents'] = theme('item_list', array('items' => $items, 'title' => t('Table of contents')));
   }
 }
 
-function araport_theme_book_toc($page) {
+function araportsandbox_theme_book_toc($page) {
   $item = array(
     'data' => l(t($page['link']['link_title']), $page['link']['link_path'])
   );
   if ($page['below']) {
     $item['children'] = array();
     foreach ($page['below'] as $child_page) {
-      $item['children'][] = araport_theme_book_toc($child_page);
+      $item['children'][] = araportsandbox_theme_book_toc($child_page);
     }
   }
   return $item;
 }
 
-function araport_theme_feed_icon($variables) {
+function araportsandbox_theme_feed_icon($variables) {
   $text = t('Subscribe to !feed-title', array('!feed-title' => $variables ['title']));
   return l("$text <i class=\"fa fa-rss-square\"></i>", $variables ['url'], array('html' => true, 'attributes' => array('title' => $text)));
 }
 
-function araport_theme_definition_list($variables) {
+function araportsandbox_theme_definition_list($variables) {
   $items = array_map(function($item) {
     return "<dt>{$item['term']}</dt><dd>{$item['def']}</dd>";
   }, $variables['items']);
@@ -200,3 +216,14 @@ function araport_theme_definition_list($variables) {
   }
   return $tag.join($items).'</dl>';
 }
+
+
+function araportsandbox_theme_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'search_block_form') {
+    // Alternative (HTML5) placeholder attribute instead of using the javascript
+    $form['search_block_form']['#attributes']['placeholder'] = t('Search by names, identifiers, keywords ...');
+    $form['search_block_form']['#attributes']['id'] = t('Frontpage_Search_Form');
+  }
+} 
+
+?>
