@@ -76,7 +76,7 @@
 <header>
   <div class="container">
     <div class="row">
-      <div class="col-md-8 col-sm-7">
+      <div class="col-md-7">
         <div id="name-and-slogan">
           <?php if (!empty($site_name)): ?>
           <h1 class="site-name"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a></h1>
@@ -86,7 +86,7 @@
           <?php endif; ?>
         </div>
       </div>
-      <div class="col-md-4 col-sm-5">
+      <div class="col-md-5">
         <?php if (!empty($page['header'])): ?>
           <?php print render($page['header']); ?>
         <?php endif; ?>
