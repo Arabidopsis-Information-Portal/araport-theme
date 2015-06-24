@@ -1,0 +1,401 @@
+/* Override styling from style.css */
+.container {
+    background: white;
+}
+
+.col-md-8 {
+    width: 61%;
+}
+
+.col-md-4 {
+    width: 39%;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.lead {
+    font-size: 18px;
+}
+
+.site-name {
+    display: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #484848;
+    font-size: 13px;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #009933;
+    margin-bottom: 15px;
+}
+
+.nav-tabs > li.active > a {
+    background: #009933;
+    color: #FFFFFF;
+    opacity: 0.90;
+    border-bottom: 1px solid #009933;
+}
+
+.nav-tabs > li > a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #989898;
+}
+
+.nav-tabs > li > a:hover {
+    font-size: 16px;
+    font-weight: bold;
+    background: #009933;
+    color: #FFFFFF;
+    border-bottom: 1px solid #009933;
+}
+
+#navbar {
+    border: none;
+    margin-top: 0px;
+}
+
+.navbar-header {
+    margin-top: -18px;
+}
+.navbar-nav {
+    height: 45px;
+    padding: 0px 0px 0px 0px;
+    margin-top: 15px;
+    border-bottom: 3px double #B8B8B8;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #009933;
+    height: 45px;
+    border-bottom: 3px double #FFFFFF;
+    color: #FFFFFF;
+ }
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #FFFFFF;						
+    background-color: #009933;
+    height: 45px;
+    border-bottom: 3px double #FFFFFF;
+}
+
+/* End of override styling from style.css*/
+
+
+
+
+/* Begin styling for Top Header */
+#block-search-form {
+    width: 240px;
+    padding-top: 10px;
+    float: right;
+    top:0;
+}
+
+.social-header {
+    position: absolute;
+    padding-top: 14px;
+
+}
+/* End styling for Top Header */
+
+
+
+
+
+/* Begin styling for frontpage registration/login box */
+.frontpage-welcome-region {
+    padding-left: 40px;
+}
+
+.frontpage-welcome-region h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #505050;
+}
+
+.frontpage-welcome-region p {
+    font-size: 14px;
+    color: #505050;
+}
+
+.frontpage-registration-buttons {
+    padding-top: 6px;
+}
+
+.registration-button {
+    font-size: 14px;
+    text-decoration: none;
+    padding:  4px 7px 4px 7px;
+    border: 1px solid;
+    color: #FFFFFF;
+    background: #009933;
+}
+
+.registration-button:hover {
+    text-decoration: none;
+    color:#009933;
+    background: #FFFFFF;
+}
+
+.right-side-readmore {
+    text-decoration: none;
+    color: #009933;
+    font-size: 10px;
+    padding: 2px 4px 2px 4px;
+    border: 1px solid;
+}
+
+.right-side-readmore:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #009933;
+}
+
+/* Begin styling for frontpage registration/login box */
+
+
+
+
+
+/*Styling for JBrowse User Guide*/
+.trackListTable {
+    font-size:12px;
+    color:#FFFFFF;
+    border-width: 5px;
+    border-color: #000000;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border-radius: 10px;
+    text-align: left;
+    table-layout: fixed;
+    display:table;
+    width: 700px;
+}
+
+.trackListTable td {
+    height: 20px;
+    padding: 4px 4px 4px 10px;
+}
+
+.trackListHeader {
+    width: 30%;
+}
+
+.trackListValue {
+    width: 70%;
+}
+
+.trackListTable .odd {
+    background-color:#4785C2;
+    width: 700px;
+}
+
+.trackListTable .even {
+    background-color:#5B91C8;
+    width: 700px;
+}
+/*End Styling for JBrowse User Guide*/
+
+
+
+
+
+/* Begin Styling for top boxes */
+.top-box1-block {
+    background: url("../images/thalemine_report.png")no-repeat;
+    height: 125px;
+    background-position: center center;
+    background-size: 220px;
+    margin-bottom: 30px;
+}
+
+.top-box2-block {
+    background: url("../images/jbrowse_tracks.png")no-repeat;
+    height: 125px;
+    background-position: center top;
+    background-size: 235px;
+    margin-bottom: 30px;
+}
+
+.top-box3-block {
+    background: url("../images/interaction_green.png")no-repeat;
+    height: 125px;
+    background-position: center top;
+    background-size: 280px;
+    margin-bottom: 30px;
+}
+
+.top-box4-block {
+    background: url("../images/blast_seq.png")no-repeat;
+    height: 125px;
+    background-position: center top;
+    background-size: 250px;
+    margin-bottom: 30px;
+}
+
+.top-box {
+    padding: 0px;
+}
+
+.top-box h2{
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+}
+
+.top-box-desc{
+    margin-top: -28px;
+}
+
+.top-box-desc p{
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #585858;
+}
+/* End Styling for top boxes */
+
+
+
+
+
+/* Begin styling for Frontpage Search Box */
+.region-plain-box-Main-Search-Region {
+    padding: 25px 10px 0px 0px;
+}
+
+.region-plain-box-Front-Page-Search-Options{
+    padding-top: 5px;
+    margin-bottom: -40px;
+}
+
+.region-plain-box-Front-Page-Search-Options .tab-pane{
+    display: none;
+}
+
+.region-plain-box-Front-Page-Search-Options .tab-pane.active {
+    display: block;
+}
+
+.Search-Examples {
+    float: left;
+    color: #EAF0EA;
+    font-style: italic;
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+.frontpage-search-box {
+    background: #009933;
+    margin-bottom: 0px;
+}
+
+.frontpage-search-box p{
+    float: right;
+    color: #EAF0EA;
+    font-style: italic;
+    font-size: 13px;
+}
+
+.frontpage-search-box .form-control {
+    height: 60px;
+    border: none;
+    font-size: 18px;
+    margin-top: 0px;
+    opacity: 100%;
+}
+
+.region-plain-box-Search-Region-1 {
+    background: #009933;
+    height: 132px;
+    border: none;
+    padding-right: 10px;
+    opacity: 0.90;
+}
+
+.add_search_icon {
+    color: white;
+}
+
+.Front-Search-Box {
+    background: #009933;
+
+    margin-bottom: 0px;
+}
+
+.Front-Search-Box .form-control {
+    height: 55px;
+    border: none;
+    width: 97%;
+    font-size: 24px;
+    margin: 10px 0px 10px 20px;
+    padding: 0px 10px 0px 15px;
+    opacity: 100%;
+}
+
+.Front-Search-Box .btn-default {
+    height: 57px;
+    width: 60px;
+    border: 1px solid #009933;
+    margin: 0px 10px 0px 0px;
+    z-index: 100;
+}
+
+.Front-Search-Box .glyphicon-search:before {
+    font-family: 'FontAwesome';
+    font-size: 25px;
+    content: '\f002';
+    color: #484848;
+}
+
+#simple-search {
+    margin: -24px 0px 0px 1px;
+}
+
+#thalemine-search {
+        margin: -24px 0px 0px 1px;
+}
+
+#browser-search {
+    margin: -24px 0px 0px 1px;
+}
+/* End styling for Frontpage Search Box */
+
+
+
+
+
+/* Begin styling for news content */
+
+.community-content h3{
+    font-size: 18px;
+}
+
+.community-content td a {
+    font-size: 13px;
+}
+
+.comment-button {
+    font-size: 12px;
+    text-decoration: none;
+    padding:  2px 5px 3px 5px;
+    border: 1px solid;
+    color: #FFFFFF;
+    background: #009933;
+}
+
+.comment-button:hover {
+    text-decoration: none;
+    color:#009933;
+    background: #FFFFFF;
+}
+/* End styling for new content */
