@@ -191,8 +191,8 @@ h2 {
 
 /* Begin styling for JBrowse Data Statistics tables */
 .dataStatsTable {
-    font-size:12px;
-    color:#FFFFFF;
+    font-size: 12px;
+    color: #303030;
     border-width: 5px;
     border-color: #000000;
     border-collapse: collapse;
@@ -201,45 +201,26 @@ h2 {
     text-align: left;
     table-layout: fixed;
     display:table;
-    width: 900px;
 }
 
 .dataStatsTable th {
-    height: 20px;
+    height: 40px;
     padding: 4px 4px 4px 10px;
     font-weight: bold;
-    width: 100px;
 }
 
 .dataStatsTable td {
     height: 20px;
     padding: 4px 4px 4px 10px;
-    width: 100px;
-}
-
-.narrow {
-    max-width:100px;
-    min-width:100px; 
-}
-
-.medium {
 
 }
-
-.wide {
-    max-width:300px;
-    min-width:300px;
-}
-
 
 .dataStatsTable .odd {
-    background-color:#4785C2;
-    width: 700px;
+    background-color:#F0F0F0;
 }
 
 .dataStatsTable .even {
-    background-color:#5B91C8;
-    width: 700px;
+    background-color: #E0E0E0;
 }
 
 
