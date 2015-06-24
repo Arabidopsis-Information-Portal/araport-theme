@@ -3,14 +3,6 @@
     background: white;
 }
 
-.col-md-8 {
-    width: 61%;
-}
-
-.col-md-4 {
-    width: 39%;
-}
-
 h1 {
     font-size: 28px;
 }
@@ -31,6 +23,12 @@ h2 {
     color: #484848;
     font-size: 13px;
 }
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #484848;
+    font-size: 13px;
+}
+
 
 .nav-tabs {
     border-bottom: 1px solid #009933;
@@ -80,12 +78,39 @@ h2 {
     color: #FFFFFF;
  }
 
+.navbar-inverse {
+    background-color: #FFFFFF;
+}
+
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+    background-color: #009933;
+    height: 45px;
+    border-bottom: 3px double #FFFFFF;
+    color: #FFFFFF;
+ }
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active-trail > a, .navbar-inverse .navbar-nav > .active-trail > a:hover, .navbar-inverse .navbar-nav > .active-trail > a:focus {
+ background-color: #009933; }
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+   background-color: #009933;
+ }
+
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: #FFFFFF;						
     background-color: #009933;
     height: 45px;
     border-bottom: 3px double #FFFFFF;
 }
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #FFFFFF;						
+    background-color: #009933;
+    height: 45px;
+    border-bottom: 3px double #FFFFFF;
+					    }
+
 
 /* End of override styling from style.css*/
 
@@ -159,9 +184,66 @@ h2 {
     color: #FFFFFF;
     background: #009933;
 }
+/* End styling for frontpage registration/login box */
 
-/* Begin styling for frontpage registration/login box */
 
+
+
+/* Begin styling for JBrowse Data Statistics tables */
+.dataStatsTable {
+    font-size:12px;
+    color:#FFFFFF;
+    border-width: 5px;
+    border-color: #000000;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border-radius: 10px;
+    text-align: left;
+    table-layout: fixed;
+    display:table;
+    width: 900px;
+}
+
+.dataStatsTable th {
+    height: 20px;
+    padding: 4px 4px 4px 10px;
+    font-weight: bold;
+    width: 100px;
+}
+
+.dataStatsTable td {
+    height: 20px;
+    padding: 4px 4px 4px 10px;
+    width: 100px;
+}
+
+.narrow {
+    max-width:100px;
+    min-width:100px; 
+}
+
+.medium {
+
+}
+
+.wide {
+    max-width:300px;
+    min-width:300px;
+}
+
+
+.dataStatsTable .odd {
+    background-color:#4785C2;
+    width: 700px;
+}
+
+.dataStatsTable .even {
+    background-color:#5B91C8;
+    width: 700px;
+}
+
+
+/* End styling for JBrowse Data Statistics Tables
 
 
 
