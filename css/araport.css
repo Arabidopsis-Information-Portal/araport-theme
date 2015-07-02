@@ -391,7 +391,6 @@ h2 {
 
 .Front-Search-Box {
     background: #009933;
-
     margin-bottom: 0px;
 }
 
@@ -461,4 +460,134 @@ h2 {
     color:#009933;
     background: #FFFFFF;
 }
+
+.araport-news-wrap {
+    padding-top: 4px;
+}
+
+.araport-news-row-even {
+    display:block;
+    width: 100%;
+    border-top: 1px solid #DDD;
+    padding-top: 15px;
+    background-color:#F9F9F9;
+}
+
+.araport-news-row-odd {
+    display:block;
+    width: 100%;
+    border-top: 1px solid #DDD;
+    padding-top: 15px;
+    background-color:#FFFFFF;
+    margin-top: -15px;
+}
+
+.araport-news-middle {
+    float:left;
+    width: 6%;
+}
+
+.araport-news-row-even {
+    display:block;
+    width: 100%;
+    border-top: 1px solid #DDD;
+    padding-top: 15px;
+    background-color:#F9F9F9;
+}
+
+.araport-news-icon {
+    float:left;
+    width: 10%;
+    overflow:hidden;
+}
+
+.araport-news-title {
+    float:left;
+    width: 37%;
+    overflow:hidden;
+}
+
+.araport-news-row-even,.araport-news-row-odd p {
+    float:left;
+    font-size:13px;
+}
+
+@media screen and (max-device-width: 768px) {
+
+    .frontpage-welcome-region {
+	padding-left: 20px;
+    }
+    
+    .araport-news-icon {
+	float:left;
+	width: 13%;
+	overflow:hidden;
+    }
+    
+    .araport-news-title {
+	float:left;
+	width: 36%;
+	overflow:hidden;
+    }
+    .araport-news-middle {
+	float:left;
+	width: 2%;
+    }
+    .araport-news-row-even,.araport-news-row-odd p {
+	float:left;
+	font-size:12px
+    }
+
+    .region-plain-box-Search-Region-1 {
+	background: #009933;
+	height: 142px;
+	border: none;
+	padding-right: 10px;
+	opacity: 0.90;
+    }
+    .Front-Search-Box .form-control {
+	height: 55px;
+	border: none;
+	width: 97%;
+	font-size: 16px;
+	margin: 10px 0px 10px 20px;
+	padding: 0px 10px 0px 15px;
+	opacity: 100%;
+    }
+    .top-box1-block {
+	background: url("../images/thalemine_report.png")no-repeat;
+	height: 125px;
+	background-position: center center;
+	background-size: 200px;
+	margin-bottom: 30px;
+    }
+    
+    .top-box2-block {
+	background: url("../images/jbrowse_tracks.png")no-repeat;
+	height: 125px;
+	background-position: center top;
+	background-size: 230px;
+	margin-bottom: 30px;
+    }
+    
+    .top-box3-block {
+	background: url("../images/interaction_green.png")no-repeat;
+	height: 125px;
+	background-position: center top;
+	background-size: 220px;
+	margin-bottom: 30px;
+    }
+    .top-box4-block {
+	background: url("../images/blast_seq.png")no-repeat;
+	height: 125px;
+	background-position: center top;
+	background-size: 200px;
+	margin-bottom: 30px;
+    }
+
+    .community-content td a {
+	font-size: 12px;
+    }
+}
+
 /* End styling for new content */
