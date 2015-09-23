@@ -591,3 +591,11 @@ h2 {
 }
 
 /* End styling for new content */
+
+/* Begin styling for science apps grid */
+    /* Fix for overlapping divs */
+.view-science-apps-catalog .view-content {
+    overflow:auto;
+    width:100%;
+}
+/* End styling for science apps grid */
