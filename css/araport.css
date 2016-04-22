@@ -1,3 +1,150 @@
+/* corner ribbons (source: http://codepen.io/eode9/pen/twkKm) */
+/* The ribbons */
+
+.corner-ribbon{
+    width: 200px;
+    background: #e43;
+    position: absolute;
+    top: 25px;
+    left: -50px;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 1px;
+    color: #f0f0f0;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+/* Custom styles */
+
+.corner-ribbon.sticky{
+    position: fixed;
+}
+
+.corner-ribbon.shadow{
+    box-shadow: 0 0 3px rgba(0,0,0,.3);
+}
+
+/* Different positions */
+
+.corner-ribbon.top-left{
+    top: 25px;
+    left: -50px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.corner-ribbon.top-right{
+    top: 25px;
+    right: -50px;
+    left: auto;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.corner-ribbon.bottom-left{
+    top: auto;
+    bottom: 25px;
+    left: -50px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.corner-ribbon.bottom-right{
+    top: auto;
+    right: -50px;
+    bottom: 25px;
+    left: auto;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+/* Colors */
+
+.corner-ribbon.white{background: #f0f0f0; color: #555;}
+.corner-ribbon.black{background: #333;}
+.corner-ribbon.grey{background: #999;}
+.corner-ribbon.blue{background: #39d;}
+.corner-ribbon.green{background: #2c7;}
+.corner-ribbon.turquoise{background: #1b9;}
+.corner-ribbon.purple{background: #95b;}
+.corner-ribbon.red{background: #e43;}
+.corner-ribbon.orange{background: #e82;}
+.corner-ribbon.yellow{background: #ec0;}
+
+/* Mini corner ribbon for the front page top-boxes panel */
+.row-wrapper {
+    padding-bottom: 15px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow:    0px 0px 2px rgba(0,0,0,0.3);
+    box-shadow:         0px 0px 2px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 90;
+}
+
+.ribbon {
+    position: absolute;
+    left: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+}
+
+.ribbon span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFF;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#F0AD4E 0%, #CF790C 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; left: -21px;
+}
+
+.ribbon.ribbon-blue span {
+    background: #79A70A;
+    background: linear-gradient(#2989d8 0%, #1e5799 100%);
+}
+
+.ribbon span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #CF790C;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #CF790C;
+}
+
+.ribbon.ribbon-blue span::before {
+    border-left: 3px solid #1e5799;
+    border-top: 3px solid #1e5799;
+}
+
+.ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #CF790C;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #CF790C;
+}
+
+.ribbon.ribbon-blue span::after {;
+    border-right: 3px solid #1e5799;
+    border-top: 3px solid #1e5799;
+
+}
+
 /* Override styling from style.css */
 .container {
     background: white;
@@ -19,16 +166,11 @@ h2 {
     display: none;
 }
 
-.navbar-default .navbar-nav > li > a {
-    color: #484848;
-    font-size: 13px;
-}
-
+.navbar-default .navbar-nav > li > a,
 .navbar-inverse .navbar-nav > li > a {
     color: #484848;
     font-size: 13px;
 }
-
 
 .nav-tabs {
     border-bottom: 1px solid #009933;
@@ -56,60 +198,65 @@ h2 {
     border-bottom: 1px solid #009933;
 }
 
+.pre-header {
+    margin-bottom: 24px;
+}
+
 #navbar {
     border: none;
     margin-top: 0px;
 }
 
-.navbar-header {
-    margin-top: -18px;
+#logo {
+    margin-top: -24px;
 }
+
 .navbar-nav {
-    height: 45px;
-    padding: 0px 0px 0px 0px;
-    margin-top: 15px;
-    border-bottom: 3px double #B8B8B8;
+    margin-top: 10px;
 }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    background-color: #009933;
-    height: 45px;
-    border-bottom: 3px double #FFFFFF;
-    color: #FFFFFF;
- }
+.navbar-nav > li > a {
+    border-bottom: 3px double #B8B8B8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
+@media screen and (max-width: 767px) {
+    .navbar-nav > li > a {
+        border: none;
+    }
+
+}
+
+.navbar-default,
 .navbar-inverse {
     background-color: #FFFFFF;
 }
 
-
-.navbar-inverse .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
     background-color: #009933;
-    height: 45px;
-    border-bottom: 3px double #FFFFFF;
+    border-color: #FFFFFF;
     color: #FFFFFF;
  }
 
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active-trail > a, .navbar-inverse .navbar-nav > .active-trail > a:hover, .navbar-inverse .navbar-nav > .active-trail > a:focus {
- background-color: #009933; }
-
-.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
-   background-color: #009933;
- }
-
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #FFFFFF;						
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active-trail > a,
+.navbar-inverse .navbar-nav > .active-trail > a:hover,
+.navbar-inverse .navbar-nav > .active-trail > a:focus {
     background-color: #009933;
-    height: 45px;
-    border-bottom: 3px double #FFFFFF;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #FFFFFF;						
-    background-color: #009933;
-    height: 45px;
-    border-bottom: 3px double #FFFFFF;
-					    }
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+   background-color: #009933;
+ }
 
 
 /* End of override styling from style.css*/
@@ -119,7 +266,7 @@ h2 {
 
 /* Begin styling for Top Header */
 #block-search-form {
-    width: 240px;
+    width: 325px;
     padding-top: 10px;
     float: right;
     top:0;
@@ -130,6 +277,13 @@ h2 {
     padding-top: 14px;
 
 }
+
+@media screen and (max-width: 500px) {
+    .social-header {
+        display: none;
+    }
+}
+
 /* End styling for Top Header */
 
 
@@ -374,7 +528,7 @@ h2 {
     border: none;
     font-size: 18px;
     margin-top: 0px;
-    opacity: 100%;
+    opacity: 1;
 }
 
 .region-plain-box-Search-Region-1 {
@@ -401,7 +555,7 @@ h2 {
     font-size: 24px;
     margin: 10px 0px 10px 20px;
     padding: 0px 10px 0px 15px;
-    opacity: 100%;
+    opacity: 1;
 }
 
 .Front-Search-Box .btn-default {
@@ -552,10 +706,11 @@ h2 {
 	font-size: 16px;
 	margin: 10px 0px 10px 20px;
 	padding: 0px 10px 0px 15px;
-	opacity: 100%;
+	opacity: 1;
     }
     .top-box1-block {
-	background: url("../images/thalemine_report.png")no-repeat;
+	background-image: url("../images/thalemine_report.png");
+    background-repeat: no-repeat;
 	height: 125px;
 	background-position: center center;
 	background-size: 200px;
@@ -563,7 +718,8 @@ h2 {
     }
     
     .top-box2-block {
-	background: url("../images/jbrowse_tracks.png")no-repeat;
+	background-image: url("../images/jbrowse_tracks.png");
+    background-repeat: no-repeat;
 	height: 125px;
 	background-position: center top;
 	background-size: 230px;
@@ -571,14 +727,16 @@ h2 {
     }
     
     .top-box3-block {
-	background: url("../images/interaction_green.png")no-repeat;
+	background-image: url("../images/interaction_green.png");
+    background-repeat: no-repeat;
 	height: 125px;
 	background-position: center top;
 	background-size: 220px;
 	margin-bottom: 30px;
     }
     .top-box4-block {
-	background: url("../images/blast_seq.png")no-repeat;
+	background-image: url("../images/blast_seq.png");
+    background-repeat: no-repeat;
 	height: 125px;
 	background-position: center top;
 	background-size: 200px;

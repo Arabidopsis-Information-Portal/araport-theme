@@ -74,34 +74,21 @@
  */
 ?>
 <header>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7">
-        <div id="name-and-slogan">
-          <?php if (!empty($site_name)): ?>
-          <h1 class="site-name"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a></h1>
-          <?php endif; ?>
-          <?php if (!empty($site_slogan)): ?>
-          <h2 class="site-slogan"><?php print $site_slogan; ?></h2>
-          <?php endif; ?>
-        </div>
-      </div>
-      <div class="col-md-5">
-        <?php if (!empty($page['header'])): ?>
-          <?php print render($page['header']); ?>
-        <?php endif; ?>
-      </div>
-    </div>
+  <h1 class="sr-only"><?php print $site_name; ?></h1>
+  <div class="container pre-header">
+    <?php if (!empty($page['header'])): ?>
+      <?php print render($page['header']); ?>
+    <?php endif; ?>
   </div>
-  <div id="navbar" class="<?php print $navbar_classes; ?>">
+  <div id="navbar" class="<?php print $navbar_classes; ?>" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <?php if ($logo): ?>
-        <div id="logo" class="logo">
+        <span id="logo" class="logo">
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
             <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
           </a>
-        </div>
+        </span>
         <?php endif; ?>	
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -114,17 +101,15 @@
 
       <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
         <div class="navbar-collapse collapse">
-          <nav role="navigation">
-            <?php if (!empty($primary_nav)): ?>
-              <?php print render($primary_nav); ?>
-            <?php endif; ?>
-            <?php if (!empty($secondary_nav)): ?>
-              <?php print render($secondary_nav); ?>
-            <?php endif; ?>
-            <?php if (!empty($page['navigation'])): ?>
-              <?php print render($page['navigation']); ?>
-            <?php endif; ?>
-          </nav>
+          <?php if (!empty($primary_nav)): ?>
+            <?php print render($primary_nav); ?>
+          <?php endif; ?>
+          <?php if (!empty($secondary_nav)): ?>
+            <?php print render($secondary_nav); ?>
+          <?php endif; ?>
+          <?php if (!empty($page['navigation'])): ?>
+            <?php print render($page['navigation']); ?>
+          <?php endif; ?>
         </div>
       <?php endif; ?>
     </div>
