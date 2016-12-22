@@ -452,7 +452,7 @@ h2 {
 }
 
 .top-box4-block {
-    background: url("../images/blast_seq.png")no-repeat;
+    background: url("../images/ePlant-tile.png")no-repeat;
     height: 125px;
     background-position: center top;
     background-size: 250px;
@@ -671,13 +671,13 @@ h2 {
     .frontpage-welcome-region {
 	padding-left: 20px;
     }
-    
+
     .araport-news-icon {
 	float:left;
 	width: 13%;
 	overflow:hidden;
     }
-    
+
     .araport-news-title {
 	float:left;
 	width: 36%;
@@ -716,7 +716,7 @@ h2 {
 	background-size: 200px;
 	margin-bottom: 30px;
     }
-    
+
     .top-box2-block {
 	background-image: url("../images/jbrowse_tracks.png");
     background-repeat: no-repeat;
@@ -725,7 +725,7 @@ h2 {
 	background-size: 230px;
 	margin-bottom: 30px;
     }
-    
+
     .top-box3-block {
 	background-image: url("../images/interaction_green.png");
     background-repeat: no-repeat;
@@ -735,7 +735,7 @@ h2 {
 	margin-bottom: 30px;
     }
     .top-box4-block {
-	background-image: url("../images/blast_seq.png");
+	background-image: url("../images/ePlant-tile.png");
     background-repeat: no-repeat;
 	height: 125px;
 	background-position: center top;
